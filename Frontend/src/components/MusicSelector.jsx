@@ -12,11 +12,11 @@ const MusicSelector = ({ setMusic }) => {
     try {
       const formData = new FormData(); // Create a FormData object
       formData.append('file', file);
-      formData.append('upload_preset', 'rc98zxhy'); // Use your Cloudinary upload preset
+      formData.append('upload_preset', 'my_unsigned_preset'); // Use your Cloudinary upload preset
 
       // Upload the music file to Cloudinary using the video endpoint (suitable for audio files)
       const response = await axios.post(
-        `https://api.cloudinary.com/v1_1/drgsagrhd/upload`, // Cloudinary video endpoint for audio files
+        `https://api.cloudinary.com/v1_1/drgsagrhd/video/upload`, // Cloudinary video endpoint for audio files
         formDat
       );
 

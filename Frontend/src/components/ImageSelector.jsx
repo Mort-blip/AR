@@ -27,12 +27,12 @@ const ImageSelector = ({ setImages }) => {
         files.map(async (file) => {
           const formData = new FormData(); // Create a FormData object
           formData.append('file', file);
-          formData.append('upload_preset', 'rc98zxhy'); // Use your Cloudinary upload preset
+          formData.append('upload_preset', 'my_unsigned_preset'); // Use your Cloudinary upload preset
 
           // Determine the upload URL based on the file type
           const uploadUrl = file.type.startsWith('image/')
-            ? `https://api.cloudinary.com/v1_1/drgsagrhd/upload`  // Image upload endpoint
-            : `https://api.cloudinary.com/v1_1/drgsagrhd/upload`; // Video/GIF upload endpoint
+            ? `https://api.cloudinary.com/v1_1/drgsagrhd/image/upload`  // Image upload endpoint
+            : `https://api.cloudinary.com/v1_1/drgsagrhd/video/upload`; // Video/GIF upload endpoint
 
           try {
             // Upload the file to Cloudinary

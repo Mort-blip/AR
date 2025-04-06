@@ -328,7 +328,7 @@ function App() {
   const uploadToCloudinary = async (videoBlob) => {
     const formData = new FormData();
     formData.append("file", videoBlob);
-    formData.append("upload_preset", "");
+    formData.append("upload_preset", "my_unsigned_preset");
 
     try {
       console.log("Uploading to Cloudinary...");
@@ -347,7 +347,7 @@ function App() {
   const handleUploadToCloudinary = async (imageFile) => {
     const formData = new FormData();
     formData.append("file", imageFile);
-    formData.append("upload_preset", "");
+    formData.append("upload_preset", "my_unsigned_preset");
 
     try {
       console.log("Uploading to Cloudinary...");
